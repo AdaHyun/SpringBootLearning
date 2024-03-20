@@ -1,0 +1,25 @@
+server:
+  port: 8081
+# MyBatis配置
+mybatis-plus:
+  # 扫描实体
+  type-aliases-package: com.ada.**.domain
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  configuration:
+    # 控制台打印完整带参数SQL语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # 配置id类型
+      # AUTO 自增, NONE 空, INPUT 用户输入, ASSIGN_ID 雪花id, ASSIGN_UUID 唯一UUID
+      id-type: assign_id
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.99.157.248:3306/demo1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: Root0126.
+
+
+
